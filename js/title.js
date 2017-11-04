@@ -1,8 +1,8 @@
 var title;
 
-function initTitle(bg)
+function initTitle()
 {
-	title = new createjs.Bitmap(bg);
+	title = new createjs.Bitmap(queue.getResult("title-placeholder"));
 }
 
 function showTitle()
@@ -11,6 +11,7 @@ function showTitle()
 
 	stage.addChild(title);
 
+	title.cursor = "pointer";
 	title.addEventListener("click", handleTitleClick);
 }
 
@@ -23,4 +24,5 @@ function hideTitle()
 function handleTitleClick(event)
 {
 	hideTitle();
+	showRoom();
 }

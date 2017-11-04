@@ -6,6 +6,8 @@ var ASPECT_RATIO = 16/9;
 var currentScreen;
 var SCREEN_LOADING = 0;
 var SCREEN_TITLE = 1;
+var SCREEN_ROOM = 2;
+var SCREEN_INSTA = 3;
 
 var queue;
 var lastTickTime;
@@ -17,7 +19,6 @@ function init()
 {
 	stage = new createjs.Stage("gameCanvas");
 	stage.enableMouseOver();
-	stage.cursor = "pointer";
 	createjs.Touch.enable(stage);
 	createjs.Ticker.addEventListener("tick", tick);
 	resize();
@@ -44,7 +45,8 @@ function loadingComplete()
 {
 	stage.removeChild(loadText);
 
-	initTitle(queue.getResult("title"));
+	initTitle();
+	initRoom();
 
 	showTitle();
 }
@@ -57,6 +59,10 @@ function tick()
 	if (currentScreen == SCREEN_LOADING)
 	{
 		loadText.text = "loading: "+Math.floor(queue.progress*100)+"%";
+	}
+	if (currentScreen == SCREEN_ROOM)
+	{
+		updateRoom(timeSinceLastTick);
 	}
 	
 	stage.update();

@@ -1,3 +1,5 @@
 { "manifest": [
-{ "id": "title", "src": "img/title.png" }
+{ "id": "bg-placeholder", "src": "img/bg-placeholder.png" },
+{ "id": "frame-tiny", "src": "img/frame-tiny.png" },
+{ "id": "title-placeholder", "src": "img/title-placeholder.png" }
 ] }
