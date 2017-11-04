@@ -47,6 +47,7 @@ function loadingComplete()
 
 	initTitle();
 	initRoom();
+	initInsta();
 
 	showTitle();
 }

@@ -13,7 +13,7 @@ function initRoom()
 	roombg.x = -740;
 	roombg.y = -200;
 
-	frame = new createjs.Bitmap(queue.getResult("frame"));
+	frame = new createjs.Bitmap(queue.getResult("frame-transparent"));
 	frame.scaleX = 0.16;
 	frame.scaleY = 0.16;
 	frameWidth = frame.getBounds().width*frame.scaleX;
@@ -41,7 +41,8 @@ function showRoom()
 	stage.addChild(topBox);
 	stage.addChild(bottomBox);
 
-	stage.cursor = "none";
+	roombg.cursor = "none";
+	roombg.addEventListener("click", takePic);
 }
 
 function hideRoom()
@@ -96,4 +97,16 @@ function updateRoom(timeSinceLastTick)
 	{
 		frame.y = ACTUAL_HEIGHT-frameHeight;
 	}
+}
+
+function takePic(event)
+{
+	var x = (frame.x - roombg.x)/roombg.scaleX;
+	var y = (frame.y - roombg.y)/roombg.scaleX;
+	var width = frameWidth/roombg.scaleX;
+	var height = frameHeight/roombg.scaleX;
+	var r = new createjs.Rectangle(x, y, width, height);
+
+	hideRoom();
+	showInsta(r);
 }
