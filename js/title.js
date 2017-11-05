@@ -2,7 +2,7 @@ var title;
 
 function initTitle()
 {
-	title = new createjs.Bitmap(queue.getResult("title-placeholder"));
+	title = new createjs.Bitmap(queue.getResult("titlescreen"));
 }
 
 function showTitle()

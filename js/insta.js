@@ -7,7 +7,7 @@ function initInsta()
 	insta.scaleX = insta.scaleY;
 	insta.x = ACTUAL_WIDTH/2 - insta.getBounds().width*insta.scaleX/2;
 
-	pic = new createjs.Bitmap(queue.getResult("bg-placeholder2"));
+	pic = new createjs.Bitmap(queue.getResult("FINAL_BACKGROUND"));
 
 	backButton = new createjs.Shape();
 	backButton.graphics.beginFill("#000000").drawRect(0, 0, ACTUAL_WIDTH, ACTUAL_HEIGHT);
@@ -43,10 +43,11 @@ function showInsta(r)
 	stage.addChild(pic);
 
 	caption.text = "";
+	caption.text += grammar.flatten("#caption#");
 
 	for (var o of objs)
 	{
-		caption.text = grammar.flatten("#"+o.name+"#");
+		caption.text += " #"+grammar.flatten("#"+o.name+"#");
 
 		var objPic = o.bmp.clone();
 		objPic.sourceRect = pic.sourceRect;
@@ -56,8 +57,9 @@ function showInsta(r)
 		stage.addChild(objPic);
 	}
 
-	if (caption.text == "") caption.text = grammar.flatten("#generic#");
-	caption.text = caption.text.replace("~", "#");
+	caption.text += " #"+grammar.flatten("#hashtag#");
+	caption.text += " #"+grammar.flatten("#hashtag#");
+	caption.text += " #"+grammar.flatten("#hashtag#");
 
 	stage.addChild(insta);
 	stage.addChild(username);

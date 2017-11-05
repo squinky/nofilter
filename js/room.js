@@ -5,7 +5,7 @@ var leftBox, rightBox, topBox, bottomBox;
 function initRoom()
 {
 	roombg = new createjs.Container();
-	roombmp = new createjs.Bitmap(queue.getResult("bg-placeholder2"));
+	roombmp = new createjs.Bitmap(queue.getResult("FINAL_BACKGROUND"));
 	roombg.addChild(roombmp);
 	addObjects();
 
@@ -23,13 +23,13 @@ function initRoom()
 	frameHeight = frame.getBounds().height*frame.scaleY;
 
 	leftBox = new createjs.Shape();
-	leftBox.graphics.beginFill("#000000").drawRect(-399, 0, 400, ACTUAL_HEIGHT);
+	leftBox.graphics.beginFill("#000000").drawRect(-1000, 0, 1000, ACTUAL_HEIGHT);
 	rightBox = new createjs.Shape();
-	rightBox.graphics.beginFill("#000000").drawRect(ACTUAL_WIDTH, 0, 400, ACTUAL_HEIGHT);
+	rightBox.graphics.beginFill("#000000").drawRect(ACTUAL_WIDTH, 0, 1000, ACTUAL_HEIGHT);
 	topBox = new createjs.Shape();
-	topBox.graphics.beginFill("#000000").drawRect(0, -399, ACTUAL_WIDTH, 400);
+	topBox.graphics.beginFill("#000000").drawRect(0, -1000, ACTUAL_WIDTH, 1000);
 	bottomBox = new createjs.Shape();
-	bottomBox.graphics.beginFill("#000000").drawRect(0, ACTUAL_HEIGHT, ACTUAL_WIDTH, 400);
+	bottomBox.graphics.beginFill("#000000").drawRect(0, ACTUAL_HEIGHT, ACTUAL_WIDTH, 1000);
 }
 
 function showRoom()
