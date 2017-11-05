@@ -9,7 +9,7 @@ var text = {
 		"I'm here for a good time not a long time",
 		"Where you movin'? I said, onto better things",
 		"Know yourself, know your worth",
-		"Make the most out of tonight, and worry ‘bout it all tomorrow",
+		"Make the most out of tonight, and worry 'bout it all tomorrow",
 		"I'm way up, I feel blessed",
 		"I cannot see heaven being much better than this",
 		"Live for today, plan for tomorrow, party tonight",
