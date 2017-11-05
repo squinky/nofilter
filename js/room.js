@@ -57,6 +57,8 @@ function hideRoom()
 
 function updateRoom(timeSinceLastTick)
 {
+	animateObjects(timeSinceLastTick);
+	
 	var pos = stage.globalToLocal(stage.mouseX, stage.mouseY);
 
 	var scrollBuffer = 100;
