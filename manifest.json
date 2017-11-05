@@ -4,5 +4,8 @@
 { "id": "frame-tiny", "src": "img/frame-tiny.png" },
 { "id": "frame-transparent", "src": "img/frame-transparent.png" },
 { "id": "frame", "src": "img/frame.png" },
+{ "id": "placeholderghost-1", "src": "img/placeholderghost-1.png" },
+{ "id": "placeholderghost-2", "src": "img/placeholderghost-2.png" },
+{ "id": "placeholderghost-3", "src": "img/placeholderghost-3.png" },
 { "id": "title-placeholder", "src": "img/title-placeholder.png" }
 ] }

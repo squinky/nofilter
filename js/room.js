@@ -1,15 +1,18 @@
-var roombg, roombgWidth, roombgHeight;
+var roombg, roombgWidth, roombgHeight, roombmp;
 var frame, frameWidth, frameHeight;
 var leftBox, rightBox, topBox, bottomBox;
 
 function initRoom()
 {
-	roombg = new createjs.Bitmap(queue.getResult("bg-placeholder2"));
+	roombg = new createjs.Container();
+	roombmp = new createjs.Bitmap(queue.getResult("bg-placeholder2"));
+	roombg.addChild(roombmp);
+	addObjects();
+
 	roombg.scaleX = 0.54;
 	roombg.scaleY = 0.54;
-	roombgWidth = roombg.getBounds().width*roombg.scaleX;
-	roombgHeight = roombg.getBounds().height*roombg.scaleY;
-
+	roombgWidth = roombmp.getBounds().width*roombg.scaleX;
+	roombgHeight = roombmp.getBounds().height*roombg.scaleY;
 	roombg.x = -740;
 	roombg.y = -200;
 
@@ -34,6 +37,7 @@ function showRoom()
 	currentScreen = SCREEN_ROOM;
 
 	stage.addChild(roombg);
+
 	stage.addChild(frame);
 
 	stage.addChild(leftBox);
