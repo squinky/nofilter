@@ -48,12 +48,16 @@ function checkObjectCollisions(r)
 
 	var o, x, y, added;
 
+	var widthBuffer = 140;
+	var heightBuffer = 50;
+	var pixelDistance = 50;
+
 	for (o of objects)
 	{
 		added = false;
-		for (x = r.x; x <= r.x+r.width; x += 100)
+		for (x = r.x; x <= r.x+r.width; x += pixelDistance)
 		{
-			for (y = r.y+140; y <= r.y+r.height; y += 100)
+			for (y = r.y+widthBuffer; y <= r.y+r.height-heightBuffer; y += pixelDistance)
 			{
 				if (o.bmp.hitTest(x, y))
 				{
@@ -69,9 +73,9 @@ function checkObjectCollisions(r)
 	for (o of animObjects)
 	{
 		added = false;
-		for (x = r.x; x <= r.x+r.width; x += 100)
+		for (x = r.x; x <= r.x+r.width; x += pixelDistance)
 		{
-			for (y = r.y+140; y <= r.y+r.height; y += 100)
+			for (y = r.y+widthBuffer; y <= r.y+r.height-heightBuffer; y += pixelDistance)
 			{
 				if (o.frames[o.currentFrame].hitTest(x, y))
 				{

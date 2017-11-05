@@ -1,4 +1,4 @@
-var insta, pic, backButton, caption;
+var insta, pic, backButton, caption, grammar;
 
 function initInsta()
 {
@@ -18,6 +18,8 @@ function initInsta()
 	caption.x = insta.x+50;
 	caption.y = 920;
 	caption.lineWidth = insta.getBounds().width*insta.scaleX - 100;
+
+	grammar = tracery.createGrammar(text);
 }
 
 function showInsta(r)
@@ -33,11 +35,11 @@ function showInsta(r)
 
 	stage.addChild(pic);
 
-	caption.text = "This is a caption. A what? A caption! A what? A caption! Oh, a caption! #blessed #yolo #idgaf #tbt #wlw #catsofinstagram";
+	caption.text = "";
 
 	for (var o of objs)
 	{
-		if (o.name == "ghost") caption.text = "OOOOOOOoooooooOOOOOOooo OOOOOOOOOOOOOooooo #spoopy"
+		caption.text = grammar.flatten("#"+o.name+"#");
 
 		var objPic = o.bmp.clone();
 		objPic.sourceRect = pic.sourceRect;
@@ -46,6 +48,9 @@ function showInsta(r)
 		objPic.x = pic.x;
 		stage.addChild(objPic);
 	}
+
+	if (caption.text == "") caption.text = grammar.flatten("#generic#");
+	caption.text = caption.text.replace("~", "#");
 
 	stage.addChild(insta);
 	stage.addChild(caption);
