@@ -1,4 +1,4 @@
-# Shütapic
+# #nofilter
 a game for GAMERella 2017
 
 ## Team members
