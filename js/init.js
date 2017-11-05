@@ -34,10 +34,10 @@ function init()
 function showLoadingScreen()
 {
 	currentScreen = SCREEN_LOADING;
-	loadText = new createjs.Text("loading: 0%", "32px Lobster Two", "#ffffff");
+	loadText = new createjs.Text("loading: 0%", "72px Lobster Two", "#ffffff");
 	loadText.textAlign = "center";
 	loadText.x = ACTUAL_WIDTH/2;
-	loadText.y = ACTUAL_HEIGHT/2 - 16;
+	loadText.y = ACTUAL_HEIGHT/2 - 36;
 	stage.addChild(loadText);
 }
 
