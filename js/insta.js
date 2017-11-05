@@ -7,7 +7,7 @@ function initInsta()
 	insta.scaleX = insta.scaleY;
 	insta.x = ACTUAL_WIDTH/2 - insta.getBounds().width*insta.scaleX/2;
 
-	pic = new createjs.Bitmap(queue.getResult("FINAL_BACKGROUND"));
+	pic = new createjs.Bitmap(queue.getResult("CATFREE_Final_Background"));
 
 	backButton = new createjs.Shape();
 	backButton.graphics.beginFill("#000000").drawRect(0, 0, ACTUAL_WIDTH, ACTUAL_HEIGHT);

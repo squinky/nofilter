@@ -5,7 +5,7 @@ var leftBox, rightBox, topBox, bottomBox;
 function initRoom()
 {
 	roombg = new createjs.Container();
-	roombmp = new createjs.Bitmap(queue.getResult("FINAL_BACKGROUND"));
+	roombmp = new createjs.Bitmap(queue.getResult("CATFREE_Final_Background"));
 	roombg.addChild(roombmp);
 	addObjects();
 

@@ -14,7 +14,7 @@ function showTitle()
 	title.cursor = "pointer";
 	title.addEventListener("click", handleTitleClick);
 
-	createjs.Sound.play(" intro-music-low", { loop: -1 });
+	createjs.Sound.play(" intro-music-low", { loop: -1, volume: 0.8 });
 }
 
 function hideTitle()

@@ -1,11 +1,11 @@
 var objects = [];
 var animObjects = [];
-var frameLength = 250;
+var frameLength = 100;
 var frameTimeElapsed = 0;
 
 function addObjects()
 {
-	//objects.push({ name: "bed", bmp: new createjs.Bitmap(queue.getResult("02bed")) });
+	// objects.push({ name: "bed", bmp: new createjs.Bitmap(queue.getResult("02bed")) });
 	// objects.push({ name: "table", bmp: new createjs.Bitmap(queue.getResult("03bedside")) });
 	// objects.push({ name: "drawer", bmp: new createjs.Bitmap(queue.getResult("04drawer")) });
 	// objects.push({ name: "mirror", bmp: new createjs.Bitmap(queue.getResult("05mirror")) });
@@ -13,12 +13,18 @@ function addObjects()
 	// objects.push({ name: "vibrator", bmp: new createjs.Bitmap(queue.getResult("07vibrator")) });
 	// objects.push({ name: "books", bmp: new createjs.Bitmap(queue.getResult("08books")) });
 
-	/*animObjects.push({ name: "ghost",
-		frames: [ new createjs.Bitmap(queue.getResult("placeholderghost-1")),
-			 		new createjs.Bitmap(queue.getResult("placeholderghost-2")),
-			 		new createjs.Bitmap(queue.getResult("placeholderghost-3")),
-			 		new createjs.Bitmap(queue.getResult("placeholderghost-2")) ],
-		currentFrame: 0 });*/
+	var catframes = [];
+	catframes.push(new createjs.Bitmap(queue.getResult("new_catdrawers01")));
+	catframes.push(new createjs.Bitmap(queue.getResult("new_catdrawers02")));
+	catframes.push(new createjs.Bitmap(queue.getResult("new_catdrawers03")));
+	catframes.push(new createjs.Bitmap(queue.getResult("new_catdrawers04")));
+	catframes.push(new createjs.Bitmap(queue.getResult("new_catdrawers05")));
+	catframes.push(new createjs.Bitmap(queue.getResult("new_catdrawers06")));
+	catframes.push(new createjs.Bitmap(queue.getResult("new_catdrawers05")));
+	catframes.push(new createjs.Bitmap(queue.getResult("new_catdrawers04")));
+	catframes.push(new createjs.Bitmap(queue.getResult("new_catdrawers03")));
+	catframes.push(new createjs.Bitmap(queue.getResult("new_catdrawers02")));
+	animObjects.push({ name: "cat", frames: catframes, currentFrame: 0 });
 
 	var o;
 	for (o of objects)

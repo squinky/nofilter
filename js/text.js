@@ -86,5 +86,7 @@ var text = {
 		"Dance like there's nobody watching. Love like you'll never be hurt. Sing like there's nobody listening. And live like it's heaven on earth."
 	],
 
-	hashtag: "blessed yolo idgaf love peace respect hashtag octothorpe instagood beautiful happy followme refreshinglyhonest honestcaption nofilter life amazing beauty instaglam photography lol swag party lifestyle home weekend awesome nice inspirational".split(" ")
+	hashtag: "blessed yolo idgaf love peace respect hashtag octothorpe instagood beautiful happy followme refreshinglyhonest honestcaption nofilter life amazing beauty instaglam photography lol swag party lifestyle home weekend awesome nice inspirational".split(" "),
+
+	cat: "catsofinstaglam bestmeow adventurecat cats softkitty nyan furiends fourleggedfuriend catto tongueouttuesday caturday petsofinstaglam pussypower lolcat canhazcheezburger".split(" ")
 }
