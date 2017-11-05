@@ -7,5 +7,15 @@
 { "id": "placeholderghost-1", "src": "img/placeholderghost-1.png" },
 { "id": "placeholderghost-2", "src": "img/placeholderghost-2.png" },
 { "id": "placeholderghost-3", "src": "img/placeholderghost-3.png" },
-{ "id": "title-placeholder", "src": "img/title-placeholder.png" }
+{ "id": "title-placeholder", "src": "img/title-placeholder.png" },
+{ "id": " intro-music-long2min", "src": "sfx/ intro-music-long2min.ogg" },
+{ "id": " intro-music-low", "src": "sfx/ intro-music-low.ogg" },
+{ "id": "camera1", "src": "sfx/camera1.ogg" },
+{ "id": "catstep", "src": "sfx/catstep.ogg" },
+{ "id": "click0", "src": "sfx/click0.ogg" },
+{ "id": "click1", "src": "sfx/click1.ogg" },
+{ "id": "click2", "src": "sfx/click2.ogg" },
+{ "id": "click3", "src": "sfx/click3.ogg" },
+{ "id": "popup_twinkles", "src": "sfx/popup_twinkles.ogg" },
+{ "id": "soundtrack1", "src": "sfx/soundtrack1.ogg" }
 ] }

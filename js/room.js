@@ -107,6 +107,8 @@ function updateRoom(timeSinceLastTick)
 
 function takePic(event)
 {
+	createjs.Sound.play("camera1");
+
 	var x = (frame.x - roombg.x)/roombg.scaleX;
 	var y = (frame.y - roombg.y)/roombg.scaleX;
 	var width = frameWidth/roombg.scaleX;

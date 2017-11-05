@@ -1,4 +1,4 @@
-var insta, pic, backButton, caption, grammar;
+var insta, pic, backButton, caption, username, grammar;
 
 function initInsta()
 {
@@ -13,6 +13,11 @@ function initInsta()
 	backButton.graphics.beginFill("#000000").drawRect(0, 0, ACTUAL_WIDTH, ACTUAL_HEIGHT);
 	backButton.alpha = 0.01;
 
+	username = new createjs.Text("", "24px Open Sans", "#333333");
+	username.textAlign = "left";
+	username.x = insta.x+150;
+	username.y = 100;
+
 	caption = new createjs.Text("", "24px Open Sans", "#333333");
 	caption.textAlign = "left";
 	caption.x = insta.x+50;
@@ -20,6 +25,8 @@ function initInsta()
 	caption.lineWidth = insta.getBounds().width*insta.scaleX - 100;
 
 	grammar = tracery.createGrammar(text);
+	username.text = grammar.flatten("#username#");
+
 }
 
 function showInsta(r)
@@ -53,6 +60,7 @@ function showInsta(r)
 	caption.text = caption.text.replace("~", "#");
 
 	stage.addChild(insta);
+	stage.addChild(username);
 	stage.addChild(caption);
 	stage.addChild(backButton);
 
@@ -68,6 +76,7 @@ function hideInsta()
 
 function goBack(event)
 {
+	createjs.Sound.play("click0");
 	hideInsta();
 	showRoom();
 }
